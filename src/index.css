@@ -4,8 +4,31 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
     
 }
+
+
+
+/*---------------------------Arrow Problems---------------------------*/
+
+.noo-padding{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.noo-paddingX{
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+}
+
+.noo-paddingY{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
 
 .no-padding{
     padding-top: 9px;
@@ -22,3 +45,89 @@
   filter: invert(66%) sepia(45%) saturate(197%) hue-rotate(185deg) brightness(83%) contrast(86%);
 }
 
+.arrow-burger{
+  filter: invert(75%) sepia(23%) saturate(375%) hue-rotate(186deg) brightness(76%) contrast(85%);
+}
+
+
+/*---------------------------Menu---------------------------*/
+.menu {
+  width: 100%;
+  height: 648.95px;
+  background-color:white;
+}
+
+/* sliding menu */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/*---------------------------Burger---------------------------*/
+
+.burger-bar {
+  width: 20px;
+  height: 2px;
+  background-color: #24335a;
+  border-radius:9999px;
+  transform: translate(0px, -5px) rotate(45deg);
+}
+
+/* clicked */
+.burger-bar.clicked:nth-child(1){
+  animation-name:  goose2;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+
+.burger-bar.clicked:nth-child(2){
+  animation-name:goose;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+}
+
+.crossOne{
+  width: 19px;
+  height: 2px;
+  background-color: white;
+  border-radius:9999px;
+  transform: translate(9.5px, 0px) rotate(45deg);
+}
+.crossTwo{
+  width: 19px;
+  height: 2px;
+  background-color: white;
+  border-radius:9999px;
+  transform: translate(-9.5px, 0px) rotate(-45deg); 
+}
+
+/*---------------------------Keyframes---------------------------*/
+
+@keyframes goose {
+  0%{transform: translate(0px, 0px); }
+  30%{transform: translate(0px, -4px); }
+  100%{transform: translate(0px, -5px) rotate(45deg); }
+}
+
+@keyframes goose2 {
+  0%{transform: translate(0px, 0px); }
+  30%{transform: translate(0px, 4px); }
+  100%{transform: translate(0px, 5px) rotate(-45deg); }
+}
+
+
+.cintfrotata:hover .crossOne {
+  background-color: #002c9b;
+}
+
+.cintfrotata:hover .crossTwo {
+  background-color: #002c9b;
+}

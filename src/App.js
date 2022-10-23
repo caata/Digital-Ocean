@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "./Hero";
-import Nav from "./Nav"
+import Hero from "./components/Main";
+import Nav from "./components/Navigation/Nav"
 
 export default function App() {
   return (
@@ -11,3 +11,4 @@ export default function App() {
     </div>
   );
 }
+ 
